@@ -1,0 +1,163 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Categories </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- <ion-card class="catCard" *ngFor="let cat of cats" (click)="selectCat(cat.storeCatTypeID)">
+           <ion-card-content>
+             <img [src]="imgsUrl+cat.image" [alt]="cat.storeCatTypeName+' image'">
+             <h2 >{{cat.storeCatTypeName}}</h2>
+             <h4>{{ cat.storesCount }} items</h4>
+           </ion-card-content>
+         </ion-card> -->
+
+  <ion-card class="catCard" (click)="selectCat(1 , 'Banks')">
+    <ion-card-content>
+      <img src="assets/img/bank.png">
+      <h2>Banks</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0, 'Restaurants')">
+    <ion-card-content>
+      <img src="assets/img/Restaurant.png">
+      <h2>Restaurants</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'Real state')">
+    <ion-card-content>
+      <img src="assets/img/real-state.png">
+      <h2>Real state</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'Cars')">
+    <ion-card-content>
+      <img src="assets/img/cars.png">
+      <h2>Cars</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'It')">
+    <ion-card-content>
+      <img src="assets/img/it.png">
+      <h2>IT</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'Ta7seel')">
+    <ion-card-content>
+      <img src="assets/img/ta7seel.jpg">
+      <h2>Ta7seel</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'Legal')">
+    <ion-card-content>
+      <img src="assets/img/legal.png">
+      <h2>Legal</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'Shopping')">
+    <ion-card-content>
+      <img src="assets/img/shopping.png">
+      <h2>Shopping</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'Jobs')">
+    <ion-card-content>
+      <img src="assets/img/jobs.png">
+      <h2>Jobs</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'Hotels')">
+    <ion-card-content>
+      <img src="assets/img/hotel.png">
+      <h2>Hotels</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'Pets')">
+    <ion-card-content>
+      <img src="assets/img/pets.png">
+      <h2>Pets</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="goToMedical()">
+    <ion-card-content>
+      <img src="assets/img/medical.png">
+      <h2>Medical</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'Cosmetics')">
+    <ion-card-content>
+      <img src="assets/img/cosmatics.png">
+      <h2>Cosmetics</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'Education')">
+    <ion-card-content>
+      <img src="assets/img/education.png">
+      <h2>Education</h2>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="catCard" (click)="selectCat(0 , 'Doctors')">
+    <ion-card-content>
+      <img src="assets/img/doctor.png">
+      <h2>Doctors</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'Construction')">
+    <ion-card-content>
+      <img src="assets/img/construction.png">
+      <h2>Construction</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'Services')">
+    <ion-card-content>
+      <img src="assets/img/services.png">
+      <h2>Services</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0 , 'SOS')">
+    <ion-card-content>
+      <img src="assets/img/sos.png">
+      <h2>SOS</h2>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="catCard" (click)="selectCat(0)">
+    <ion-card-content>
+      <img src="assets/img/charity.png">
+      <h2>Charity</h2>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="catCard" (click)="selectCat(0)">
+    <ion-card-content>
+      <img src="assets/img/waste.png">
+      <h2>Waste</h2>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

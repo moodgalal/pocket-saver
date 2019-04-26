@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="primary" align-title="center">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Go Green</ion-title>
+    <ion-buttons end>
+      <button ion-button clear class="btn-barcode" (click)="openBarcodePage()">
+        <img src="assets/img/barcode-icon.png"/>
+      </button>
+      <button ion-button clear class="right-menu-button" (click)="presentPopover($event)"></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content *ngIf="info">
+        <img src="assets/img/no-img.gif" class="avatar"/>
+        <h3>Login Number : <span style="font-weight: bold">{{ info.loginName }}</span></h3>
+        <h3>Customer Name : <span style="font-weight: bold">{{ info.customerName }}</span></h3>
+        <h3>BirthDate : <span style="font-weight: bold">{{info.birthdate | date}}</span></h3>
+        <h3>Phone Number : <span style="font-weight: bold">{{ info.phoneNumber }}</span></h3>
+        <h3>Points : <span style="font-weight: bold">300</span></h3>
+    </ion-card-content>
+  </ion-card>
+    <ion-list>
+        <ion-item no-lines no-border>
+            <button item-end ion-button small color="primary" padding (click)="showChangePass()">Change Password</button>
+        </ion-item>
+    </ion-list>
+    <form #f="ngForm" [hidden]="!showChangePassword" padding>
+
+
+        <ion-input type="text" [(ngModel)]="currentPass" name="current" required placeholder="Current Password"></ion-input>
+        <ion-input type="text" #pass [(ngModel)]="newPass" name="new" required placeholder="New Password"></ion-input>
+        <ion-input type="text" #confirm [(ngModel)]="confirmPass" name="confirm" required placeholder="Confirm Password"></ion-input>
+        <div  class="error" *ngIf="pass.value !== confirm.value">Match the passwords please</div>
+
+        <button [disabled]="!f.valid || disableButtons" ion-button block color="primary" (click)="changePass()">Save</button>
+    </form>
+</ion-content>

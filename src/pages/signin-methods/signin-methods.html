@@ -1,0 +1,23 @@
+<ion-content padding>
+  <div class="form-container">
+    <img src="assets/img/lock.svg" id="lock">
+
+    <div class="error" *ngIf="error">{{ error }}</div>
+
+    <!--<button ion-button padding full color="facebook" (click)=" loginFacebook()" id="fb" icon-left><ion-icon-->
+            <!--name="logo-facebook"></ion-icon>Login With Facebook</button> -->
+    <br>
+    <button ion-button padding full color="danger" (click)="loginGoogle()" id="google" icon-left>
+      <ion-icon name="logo-google"></ion-icon>Login With Google</button>
+    <br>
+    <button ion-button padding full color="light" (click)="emailLogin()" id="email" icon-left>
+      <ion-icon ios="ios-mail" md="md-mail"></ion-icon>Login with Username
+    </button>
+    <br><br>
+  </div>
+
+  <ion-row padding>
+    Don't have an account?
+    <button id="go-signup" ion-button clear color="light" (click)="goSignup()">Sign Up</button>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,150 @@
+<!--<ion-content padding>-->
+	<!--<div>-->
+		<!--<img src="assets/img/logo.svg" class="logo"/>-->
+	<!--</div>-->
+	<!--<h3 class="center">Sign Up</h3>-->
+	<!--<form id="login-form" #f="ngForm" (submit)="doSignup(f)" method="post">-->
+		<!--<ion-list>-->
+			<!--<ion-item>-->
+				<!--<ion-label fixed>-->
+					<!--<ion-icon name="person">-->
+						<!--User-->
+					<!--</ion-icon>-->
+
+				<!--</ion-label>-->
+				<!--<ion-input #user type="text" (ngModel)="username" name="username" (ionBlur)="checkUser(user.value)" required></ion-input>-->
+			<!--</ion-item>-->
+			<!--<div  class="error" *ngIf="userError == true && user.value !== null">This user is already exists</div>-->
+			<!--<ion-item>-->
+				<!--<ion-label fixed>-->
+					<!--<ion-icon name="mail"> Email</ion-icon>-->
+				<!--</ion-label>-->
+				<!--<ion-input type="email" (ngModel)="mail" name="mail" required></ion-input>-->
+			<!--</ion-item>-->
+			<!--<ion-item>-->
+				<!--<ion-label fixed>-->
+					<!--<ion-icon name="lock"> Password</ion-icon>-->
+				<!--</ion-label>-->
+				<!--<ion-input type="password"  (ngModel)="password" name="password" required #pass></ion-input>-->
+			<!--</ion-item>-->
+			<!--<ion-item>-->
+				<!--<ion-label fixed>-->
+					<!--<ion-icon name="checkmark"> Confirm</ion-icon>-->
+				<!--</ion-label>-->
+				<!--<ion-input type="password"  #confirmPass (ngModel)="confirmPassword" name="confirmPassword" required></ion-input>-->
+			<!--</ion-item>-->
+
+			<!--<div  class="error" *ngIf="pass.value !== confirmPass.value">Match the passwords please</div>-->
+
+			<!--<ion-item>-->
+				<!--<ion-label>-->
+					<!--<ion-icon name="calendar"> Birthdate</ion-icon>-->
+				<!--</ion-label>-->
+				<!--<ion-datetime displayFormat="MM/DD/YYYY" color="light" (ngModel)="date" name="date" required></ion-datetime>-->
+			<!--</ion-item>-->
+			<!--<ion-item>-->
+				<!--<ion-label>-->
+					<!--Currency-->
+				<!--</ion-label>-->
+				<!--<ion-select (ngModel)="currency" name="currency" required>-->
+					<!--<div *ngIf="currencies">-->
+						<!--<ion-option *ngFor="let currency of currencies" [value]="currency">{{currency.currencyName}}</ion-option>-->
+					<!--</div>-->
+				<!--</ion-select>-->
+			<!--</ion-item>-->
+			<!--<ion-item>-->
+				<!--<ion-label fixed>-->
+					<!--<ion-icon name="phone-portrait"> Phone</ion-icon>-->
+				<!--</ion-label>-->
+				<!--<ion-input type="number" (ngModel)="phone" name="phone" required></ion-input>-->
+			<!--</ion-item>-->
+			<!--<ion-item>-->
+				<!--<ion-label>Gender</ion-label>-->
+				<!--<ion-select (ngModel)="gender" name="gender" required>-->
+					<!--<div *ngIf="genders">-->
+						<!--<ion-option *ngFor="let gender of genders" [value]="gender.genderID">{{gender.genderName}}</ion-option>-->
+					<!--</div>-->
+				<!--</ion-select>-->
+			<!--</ion-item>-->
+			<!--<div style="padding-left:15px">-->
+				<!--<button [disabled]="!f.valid || disableButton === true"  id="btn-signup" type="submit" ion-button block color="light" >SIGN UP</button>-->
+			<!--</div>-->
+		<!--</ion-list>-->
+	<!--</form>-->
+	<!--<ion-row padding>-->
+		<!--Have an account?-->
+		<!--<button id="go-login"  ion-button outline color="light" (click)="goLogin()" >Login</button>-->
+	<!--</ion-row>-->
+<!--</ion-content>-->
+
+<ion-content padding>
+
+	<div class="login-container  marb-10">
+		<div class="logo">
+			<img class="mx-auto d-block " src="assets/img/logo2-header.png"/>
+		</div>
+
+		<form  #f="ngForm" (submit)="doSignup(f)" method="post">
+			<ion-list>
+				<ion-item>
+					<ion-label floating>Login Number</ion-label>
+					<ion-input #user type="number" (ngModel)="userLoginNumber" name="userLoginNumber" (ionBlur)="checkUser(user.value)" required></ion-input>
+				</ion-item>
+				<div  class="error" *ngIf="userError == true && user.value !== null">This user is already exists</div>
+				<ion-item>
+					<ion-label floating>User Name</ion-label>
+					<ion-input type="text" (ngModel)="username" name="username" required></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-label floating>Email</ion-label>
+					<ion-input type="email" (ngModel)="mail" name="mail" required></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-label floating>Password</ion-label>
+					<ion-input type="password"  (ngModel)="password" name="password" required #pass></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-label floating>Confirm Password</ion-label>
+					<ion-input type="password"  #confirmPass (ngModel)="confirmPassword" name="confirmPassword" required></ion-input>
+				</ion-item>
+
+				<div  class="error" *ngIf="pass.value !== confirmPass.value">Match the passwords please</div>
+
+				<ion-item>
+					<ion-label floating>Birth Date</ion-label>
+					<ion-datetime displayFormat="MM/DD/YYYY" color="light" (ngModel)="date" name="date" required></ion-datetime>
+				</ion-item>
+				<ion-item>
+					<ion-label >Currency</ion-label>
+					<ion-select (ngModel)="currency" name="currency" required>
+						<div *ngIf="currencies">
+							<ion-option *ngFor="let cur of currencies" [value]="cur" [selected]="MobileModel.currencyCode !== null && MobileModel.currencyCode === cur.currencyCode.trim()">{{cur.currencyName}}</ion-option>
+						</div>
+					</ion-select>
+				</ion-item>
+				<ion-item>
+					<ion-label floating>Phone Number</ion-label>
+					<ion-input type="number" (ngModel)="phone" [value]="user.value" name="phone" required></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-label>Gender</ion-label>
+					<ion-select (ngModel)="gender" name="gender" required>
+						<div>
+							<ion-option  value="1">Male</ion-option>
+							<ion-option  value="2">Female</ion-option>
+							<ion-option  value="3">Other</ion-option>
+						</div>
+					</ion-select>
+				</ion-item>
+				<div>
+					<button [disabled]="!f.valid" color="primary"  type="submit" ion-button block>SIGN UP</button>
+				</div>
+			</ion-list>
+		</form>
+
+		<div padding>
+			<span>Do you have an account ?</span> <button ion-button clear (click)="goLogin()">Sign in</button>
+		</div>
+	</div>
+
+</ion-content>

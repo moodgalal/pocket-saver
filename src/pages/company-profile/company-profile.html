@@ -1,0 +1,97 @@
+<ion-header>
+
+  <ion-navbar no-border-bottom>
+    <ion-title>Store Profile</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+     <ion-segment [(ngModel)]="defaultTab">
+       <ion-segment-button value="info">
+         Info
+         <ion-icon name="person"></ion-icon>
+       </ion-segment-button>
+       <ion-segment-button value="offers">
+         Offers
+         <ion-icon name="basket"></ion-icon>
+       </ion-segment-button>
+       <ion-segment-button value="bills">
+         Bills
+         <ion-icon name="cash"></ion-icon>
+       </ion-segment-button>
+     </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div [ngSwitch]="defaultTab">
+    <div *ngSwitchCase="'info'">
+       <div *ngIf="storeInfo">
+         <ion-avatar style="margin: 20px;">
+           <img *ngIf="storeInfo.image !== null" [src]="imgsUrl+storeInfo.image" class="avatar">
+           <img *ngIf="storeInfo.image == null" src="assets/img/no-img.gif" class="avatar">
+         </ion-avatar>
+         <ion-list>
+           <ion-item>
+             <ion-icon item-start name="person" color="primary"></ion-icon>
+             {{ storeInfo.storeName }}
+           </ion-item>
+           <ion-item>
+             <ion-icon item-start name="mail" color="primary"></ion-icon>
+             {{ storeInfo.email }}
+           </ion-item>
+           <ion-item>
+             <ion-icon item-start name="phone-portrait" color="primary"></ion-icon>
+             {{ storeInfo.phone }}
+           </ion-item>
+           <ion-item>
+             <ion-icon item-start name="compass" color="primary"></ion-icon>
+             {{ storeInfo.storeLocation }}
+           </ion-item>
+
+         </ion-list>
+       </div>
+    </div>
+
+    <div *ngSwitchCase="'offers'">
+
+      <div *ngIf="offers == null" style="text-align: center; margin-top: 30px">
+        <h1>No Items Found</h1>
+      </div>
+
+      <div *ngIf="offers !== null" class="card-background-page">
+          <ion-card *ngFor="let offer of offers">
+            <img *ngIf="offer.offerImage !== null" src="{{offerImgUrl+offer.offerImage}}" alt="offerImg" height="100px">
+            <img *ngIf="offer.offerImage == null" src="assets/img/logo-header.png">
+            <div class="overlay"></div>
+
+            <div class="content">
+              <h2 class="issue">Offer #{{ offer.offerID }}</h2>
+              <h3 class="card-title">{{ offer.offerName }}</h3>
+              <div class="card-subtitle">{{ offer.offerDescription }}</div>
+            </div>
+          </ion-card>
+
+          <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+            <ion-infinite-scroll-content></ion-infinite-scroll-content>
+          </ion-infinite-scroll>
+
+          <div  [hidden]="noMoreHidden" class="nomore">No More Items</div>
+
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'bills'">
+      <div *ngIf="storeBills == null" style="text-align: center; margin-top: 30px">
+        <h1>No Items Found</h1>
+      </div>
+
+      <ion-list *ngIf="storeBills !== null " inset>
+        <ion-item *ngFor="let bill of storeBills">
+          <strong item-start>{{ bill.CreatedDate }}</strong>
+          <p item-end>{{ bill.TrxAMT  }}{{ bill.CurrencyCode.trim()  }}</p>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

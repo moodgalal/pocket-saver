@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="primary" align-title="center">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Go Green</ion-title>
+    <ion-buttons end>
+      <button ion-button clear class="btn-barcode" (click)="openBarcodePage()">
+        <img src="assets/img/barcode-icon.png"/>
+      </button>
+      <button ion-button clear class="right-menu-button" (click)="presentPopover($event)"></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding >
+  <ion-card>
+    
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/logo-header.png">
+        </ion-avatar>
+        <h2>store Name</h2>
+        <p>November 5, 1955</p>
+      </ion-item>
+    
+    
+      <ion-card-content>
+        <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+      </ion-card-content>
+    
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="cart"></ion-icon>
+            <div>view store</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small color="secondary">
+            <ion-icon name="options"></ion-icon>
+            <div>Edit</div>
+          </button>
+        </ion-col>
+        <ion-col >
+          <button ion-button icon-left clear small color="danger" >
+            <ion-icon name="trash" color="danger"> </ion-icon>
+            <div color="danger">Delete</div>
+            
+          </button>
+        </ion-col>
+      </ion-row>
+    
+    </ion-card>
+</ion-content>

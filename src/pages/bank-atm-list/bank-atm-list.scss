@@ -1,0 +1,50 @@
+page-bank-atm-list {
+    .item-md ion-thumbnail img {
+        width: 60px;
+        height: 60px;
+    }
+    .icon-map{
+        margin: 0 2px;
+    }
+    .item-md .item-button{
+        margin: 0;
+    }
+    .list-md .item-block .item-inner{
+        height: 75px;
+    }
+    .input-wrapper{
+        min-height: auto;
+        height: auto;
+    }
+    ion-avatar{
+        position: relative;
+        margin-top: 0;
+        padding:15px;
+       
+        
+        .overlay-bank{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: url('../assets/img/bg-bank.jpg');
+            -webkit-filter: blur(2px);
+            -moz-filter: blur(2px);
+            -o-filter: blur(2px);
+            -ms-filter: blur(2px);
+            filter: blur(2px);
+            background-position: center;
+            z-index: -1;
+        }
+        .avatar{
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgba(0,0,0,.3);
+            display: block;
+            margin: auto;
+            
+        }
+}
+}

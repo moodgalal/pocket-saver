@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary" hideBackButton>
+    <ion-title>Go Green</ion-title>
+    <ion-buttons end>
+      <button ion-button clear class="right-menu-button" (click)="presentPopover($event)"></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+	<div class="barcode-container"  text-center>
+	    <ion-buttons end>
+			<button ion-button icon-only clear color="dark" (click)="goBack()">
+				<ion-icon name="close" ></ion-icon>
+			</button>
+		</ion-buttons>
+		<svg style="" #barcode id="barcode" text-center></svg>
+		<h3 id="date" ></h3>
+		<br>
+
+		<div id="clock" style="font-size: x-large">{{ clock | date:'jms'}}</div>
+	</div>
+</ion-content>

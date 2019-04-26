@@ -1,0 +1,104 @@
+<!--<ion-header>-->
+  <!--<ion-navbar color="primary" text-center>-->
+
+          <!--<button ion-button icon-only clear class="calender"  (click)="getBillsByDate()">-->
+              <!--<ion-icon ios="ios-calendar" md="md-calendar"></ion-icon>-->
+          <!--</button>-->
+
+
+    <!--<ion-title>Fawateri</ion-title>-->
+
+
+    <!--<ion-buttons end>-->
+      <!--<button ion-button clear class="btn-barcode" (click)="openBarcodePage()">-->
+        <!--<img src="assets/img/barcode-icon.png"/>-->
+      <!--</button>-->
+      <!--<button ion-button clear small class="right-menu-button" (click)="presentPopover($event)"></button>-->
+    <!--</ion-buttons>                          -->
+  <!--</ion-navbar>-->
+<!--</ion-header>-->
+
+<ion-header>
+    <ion-navbar>
+
+            <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+
+        <button ion-button icon-only clear class="calender"  (click)="getBillsByDate()">
+            <ion-icon ios="ios-calendar" md="md-calendar" color="dark"></ion-icon>
+        </button>
+
+
+        
+        <ion-title>
+            <img src="assets/img/icon.png"/>
+        </ion-title>
+
+        <ion-buttons end>
+               <button ion-button clear class="btn-barcode" (click)="openBarcodePage()" >
+                   <img src="assets/img/barcode-icon.png"/>
+               </button>
+
+               <button ion-button icon-only style="margin-left: 10px" (click)="doFilter()" >
+                   <ion-icon name="funnel"></ion-icon>
+               </button>
+
+               <button ion-button clear small class="right-menu-button" (click)="presentPopover($event)" ></button>
+           </ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)" color="primary">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  <ion-list no-padding>
+      <ion-item-sliding  *ngFor="let bill of bills">
+    <ion-item no-padding>
+       <ion-avatar item-start>
+           <div class="date-container">
+               <span style="color: white">{{bill.createdDate | date:'d'}}</span>
+               <br>
+               <span style="color: white">{{bill.createdDate | date:'MMM'}}</span>
+           </div>
+       </ion-avatar>
+
+          <h2 style="margin-bottom:10px">{{bill.storeName}}</h2>
+          <h3>
+             <button  [disabled]="bill.longitude == null || bill.latitude == null" ion-button icon-only outline clear (click)="showMap(bill)" color="primary-ahmed">
+                 <ion-icon name="pin">
+                     {{bill.storeLocation}}
+                 </ion-icon>
+             </button>
+          </h3>
+          <strong [hidden]="bill.trxAMT == null" style="float: left"  item-end>{{ bill.trxAMT }} {{bill.currencyCode}}</strong>
+     </ion-item>
+          <ion-item-options side="right">
+              <button ion-button color="primary-ahmed" (click)="goEdit(bill)" style="padding: 0 25px 0 25px">
+                  <ion-icon  name="options"></ion-icon>
+                  Edit
+              </button>
+              <!--<button ion-button color="primary-ahmed" (click)="goView(bill)" style="padding: 0 25px 0 25px">-->
+                  <!--<ion-icon  name="eye"></ion-icon>-->
+                  <!--View-->
+              <!--</button>-->
+              <!--<button [hidden]="bill.printedFile === null" ion-button clear color="primary-ahmed">-->
+                  <!--<ion-icon  name="document"></ion-icon>-->
+                  <!--<object [data]="'http://173.212.224.45:2020/Files/'+bill.printedFile" type="application/pdf"><a [href]="'http://173.212.224.45:2020/Files/'+bill.printedFile" style="text-decoration: none">Read</a></object>-->
+              <!--</button>-->
+          </ion-item-options>
+
+          <ion-item-options side="left">
+              <button ion-button color="danger" (click)="deleteBill(bill.trxID)">
+                  <ion-icon color="light" name="trash"></ion-icon>
+                  Delete
+              </button>
+          </ion-item-options>
+      </ion-item-sliding>
+  </ion-list>
+    <ion-fab right bottom>
+        <button ion-fab mini id="add-button" (click)="addBill()"><ion-icon name="md-add"></ion-icon></button>
+    </ion-fab>
+</ion-content>

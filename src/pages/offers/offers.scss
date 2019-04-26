@@ -1,0 +1,127 @@
+page-offers {
+  ion-content,
+  ion-header {
+    color: #292929;
+    background-color: #fff !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  ion-header {
+    box-shadow: 1px 0 35px #e4e4e4;
+  }
+  .right-menu-button {
+    margin-left: 20px;
+  }
+  .segment-md .segment-button {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: #488aff;
+    color: #fff;
+    font-size: 11px;
+    height: auto;
+    line-height: 2.5rem;
+    margin: 2px;
+  }
+  .cat-seg {
+    overflow-x: auto;
+    padding: 5px;
+    text-align: center;
+    height: 118px;
+    width: 100%;
+    overflow-y: -webkit-paged-x;
+    button {
+      width: 33.33%;
+      height: 100px;
+      float: left;
+      display: inline-block;
+      img {
+        display: block;
+        width: auto;
+        height: 50px;
+        margin: auto;
+      }
+      span {
+        display: block;
+        width: auto;
+        margin: auto;
+      }
+    }
+  }
+  .all-btn-container{
+    background-color: #488aff;
+    padding: 10px 2px;
+    text-align: center;
+    button:hover,
+    .button-md:hover:not(.disable-hover) {
+      background-color: #fff;
+    }
+    .all-button {
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      border-radius: 5px;
+      margin: auto;
+      width: 90%;
+      max-width: 90%;
+      min-width: 90%;
+      padding: 5px;
+      height: 50px;
+      img {
+        display: block;
+        width: auto;
+        height: 35px;
+        margin: auto;
+        vertical-align: middle;
+      }
+    }
+  }
+  .sub-cat {
+    background-color: rgb(224, 224, 224);
+    padding: 10px 2px;
+   
+    button:hover,
+    .button-md:hover:not(.disable-hover) {
+      background-color: #fff;
+    }
+    
+    button {
+      background-color: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      border-radius: 5px;
+      margin: auto;
+      width: 20%;
+      max-width: 20%;
+      min-width: 20%;
+      padding: 5px;
+      height: 50px;
+      img {
+        display: block;
+        width: auto;
+        height: 35px;
+        margin: auto;
+        vertical-align: middle;
+      }
+    }
+  }
+  .card-md {
+    position: relative;
+    .card-content-md {
+      padding: 0;
+      position: relative;
+      h2 {
+        position: absolute;
+        padding: 10px 5px;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+      }
+    }
+    .card-footer {
+      padding: 10px 5px;
+    }
+  }
+  .grid {
+    background-color: #f3f3f3;
+  }
+}

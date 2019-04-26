@@ -1,0 +1,19 @@
+page-hospital {
+    .item-md ion-thumbnail img {
+        width: 60px;
+        height: 60px;
+    }
+    .icon-map{
+        margin: 0 2px;
+    }
+    .item-md .item-button{
+        margin: 0;
+    }
+    .list-md .item-block .item-inner{
+        height: 75px;
+    }
+    .input-wrapper{
+        min-height: auto;
+        height: auto;
+    }
+}

@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list *ngIf="stores.length > 0">
+      <ion-item *ngFor="let store of stores">
+      <ion-thumbnail item-start>
+        <img *ngIf="store.image !== null" [src]="imgsUrl+store.image" [alt]="store.storeCatTypeName+' image'">
+          <img *ngIf="store.image == null" src="assets/img/logo-header.png">
+      </ion-thumbnail>
+      <h2>{{ store.storeName }}</h2>
+      <p>{{ store.storeLocation }}</p>
+      <button ion-button clear item-end (click)="viewStore(store.storeID)">View</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

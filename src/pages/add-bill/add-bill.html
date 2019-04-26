@@ -1,0 +1,297 @@
+<ion-header>
+  <ion-navbar color="primary" align-title="center">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Go Green</ion-title>
+    <ion-buttons end>
+      <button ion-button clear class="btn-barcode" (click)="openBarcodePage()">
+        <img src="assets/img/barcode-icon.png" />
+      </button>
+      <button ion-button clear class="right-menu-button" (click)="presentPopover($event)"></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <!--<ion-row style="padding:15px 5px 3px 2px">-->
+  <!--<button ion-button icon-only outline color="secondary" (click)="getPosition()"><ion-icon name="pin"></ion-icon></button>-->
+  <!--<button ion-button icon-only outline color="secondary" (click)="scanBarcode()"><ion-icon name="barcode"></ion-icon></button>-->
+  <!--<button ion-button icon-only outline color="secondary" (click)="takePic()"><ion-icon name="image"></ion-icon></button>-->
+  <!--</ion-row>-->
+  <!-- <h3 class="title-page">
+    <span>Add new bill</span>
+  </h3> -->
+  <div class="add-bill-inputs">
+    <ion-row>
+
+      <ion-col col-2>
+        <button [disabled]="disableButtons" ion-button padding color="orange-ahmed" block (click)="add()">Save</button>
+      </ion-col>
+      <ion-col col-7>
+        <ion-input type="text" name="catandsub" [(ngModel)]="selectedCatName+'/'+selectedSubCatName" required></ion-input>
+      </ion-col>
+      <ion-col col-3>
+        <ion-input type="number" [(ngModel)]="trxAmt" required placeholder="Amount"></ion-input>
+      </ion-col>
+
+      <!--<ion-col col-2>-->
+      <!--<ion-input [disabled]="billInfo.decimalDigit == 0" type="text"  [maxlength]="billInfo.decimalDigit" [(ngModel)]="decimalAmt"></ion-input>-->
+      <!--</ion-col>-->
+    </ion-row>
+  </div>
+
+  <ion-row [hidden]="!showAddCat">
+    
+    <ion-col col-10>
+      <ion-input type="text" [(ngModel)]="addCat" placeholder="Category Name"></ion-input>
+    </ion-col>
+    <ion-col col-2>
+        <button [disabled]="disableButtons" ion-button outline color="primary" block (click)="addCatFun()">
+          <ion-icon name="md-checkmark"></ion-icon>
+        </button>
+      </ion-col>
+  </ion-row>
+
+  <ion-row [hidden]="!showAddSubCat">
+   
+    <ion-col col-10>
+      <ion-input type="text" [(ngModel)]="addSubCat" placeholder="Sub Category Name"></ion-input>
+    </ion-col>
+    <ion-col col-2>
+        <button [disabled]="disableButtons" ion-button icon-only outline color="primary" block (click)="addSubCatFun()">
+          <ion-icon name="md-checkmark"></ion-icon>
+        </button>
+      </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-6>
+      <button ion-button color="primary" block (click)="showAddCat = !showAddCat">Add new category</button>
+    </ion-col>
+    <ion-col col-6>
+      <button [disabled]="selectedCatId === null" ion-button color="primary" block (click)="showAddSubCat = !showAddSubCat">ADD SUB CATEGORY</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6  class="educational-list">
+      <div>
+        <ion-spinner duration="1000"  [hidden]="stopSpinCat"></ion-spinner>
+        <ion-list *ngIf="categories" no-lines>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/bank.png">
+                  </ion-avatar>
+              Bank
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/Restaurant.png">
+                  </ion-avatar>
+                  Restaurant
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/real-state.png">
+                  </ion-avatar>
+                  real state
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/cars.png">
+                  </ion-avatar>
+                 cars
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/it.png">
+                  </ion-avatar>
+                  IT
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/ta7seel.jpg">
+                  </ion-avatar>
+                  Ta7seel
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/legal.png">
+                  </ion-avatar>
+                  lgeal
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/shopping.png">
+                  </ion-avatar>
+                  shopping
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/jobs.png">
+                  </ion-avatar>
+                  Jobs
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/hotel.png">
+                  </ion-avatar>
+                  Hotels
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/pets.png">
+                  </ion-avatar>
+                  Pets
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/medical.png">
+                  </ion-avatar>
+                  medical
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/doctor.png">
+                  </ion-avatar>
+                  Doctor
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/cosmatics.png">
+                  </ion-avatar>
+                  Cosmatics
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/education.png">
+                  </ion-avatar>
+                  Education
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/construction.png">
+                  </ion-avatar>
+                  Construction
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/services.png">
+                  </ion-avatar>
+                  Services
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/sos.png">
+                  </ion-avatar>
+                  SOS
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/img/charity.png">
+                  </ion-avatar>
+                  Charity
+            </ion-item>
+            <ion-item *ngFor="let cat of categories" [class.selected]="cat.categoryID == selectedCatId" (click)="getSubCat(cat.categoryID , cat.categoryName)">
+                <ion-avatar item-start>
+                    <img src="assets/img/charity.png">
+                  </ion-avatar>
+              {{ cat.categoryName }}
+            </ion-item>
+          </ion-list>
+      </div>
+    </ion-col>
+    <ion-col col-6 class="educational-list">
+      <ion-spinner duration="1000" [hidden]="stopSpinSubCat"></ion-spinner>
+      <ion-list *ngIf="subCategories" no-lines>
+        <ion-item *ngFor="let subCat of subCategories" [class.selected]="subCat.subCategoryID == selectedSubCatId"  (click)="selectSubCat(subCat.subCategoryID,subCat.subCategoryName)">
+            <ion-avatar item-start>
+                <img src="assets/img/charity.png">
+              </ion-avatar>
+          {{ subCat.subCategoryName }}
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <!-- <ion-slides slidesPerView="3" class="cat-slide" padding="5px">
+
+    <ion-slide>
+      <ion-thumbnail class="shadow" [class.selected]="selectedCat === null" color="secondary" (click)="getByCat(null)">
+        <img src="assets/img/bank.png">
+        <h6>bank</h6>
+      </ion-thumbnail>
+    </ion-slide>
+    <ion-slide>
+      <ion-thumbnail class="shadow" [class.selected]="selectedCat === null" color="secondary" (click)="getByCat(null)">
+        <img src="assets/img/Restaurant.png">
+        <h6>Restaurants</h6>
+      </ion-thumbnail>
+    </ion-slide>
+    <ion-slide>
+      <ion-thumbnail class="shadow" [class.selected]="selectedCat === null" color="secondary" (click)="getByCat(null)">
+        <img src="assets/img/real-state.png">
+        <h6>real-state</h6>
+      </ion-thumbnail>
+    </ion-slide>
+    <ion-slide>
+      <ion-thumbnail class="shadow" [class.selected]="selectedCat === null" color="secondary" (click)="getByCat(null)">
+        <img src="assets/img/cars.png">
+        <h6>Cars</h6>
+      </ion-thumbnail>
+    </ion-slide>
+    <ion-slide>
+      <ion-thumbnail class="shadow" [class.selected]="selectedCat === null" color="secondary" (click)="getByCat(null)">
+        <img src="assets/img/it.png">
+        <h6>IT</h6>
+      </ion-thumbnail>
+    </ion-slide>
+    <ion-slide>
+      <ion-thumbnail class="shadow" [class.selected]="selectedCat === null" color="secondary" (click)="getByCat(null)">
+        <img src="assets/img/charity.png">
+        <h6>charity</h6>
+      </ion-thumbnail>
+    </ion-slide> 
+
+
+  </ion-slides>
+  <ion-slides slidesPerView="4" class="subCat-slide" padding="5px">
+
+    <ion-slide>
+      <ion-thumbnail class="shadow" [class.selected]="selectedCat === null" color="secondary" (click)="getByCat(null)">
+        <img src="assets/img/bank.png">
+        <h6>bank</h6>
+      </ion-thumbnail>
+    </ion-slide>
+    <ion-slide>
+      <ion-thumbnail class="shadow" [class.selected]="selectedCat === null" color="secondary" (click)="getByCat(null)">
+        <img src="assets/img/Restaurant.png">
+        <h6>Restaurants</h6>
+      </ion-thumbnail>
+    </ion-slide>
+    <ion-slide>
+      <ion-thumbnail class="shadow" [class.selected]="selectedCat === null" color="secondary" (click)="getByCat(null)">
+        <img src="assets/img/real-state.png">
+        <h6>real-state</h6>
+      </ion-thumbnail>
+    </ion-slide>
+    <ion-slide>
+      <ion-thumbnail class="shadow" [class.selected]="selectedCat === null" color="secondary" (click)="getByCat(null)">
+        <img src="assets/img/cars.png">
+        <h6>Cars</h6>
+      </ion-thumbnail>
+    </ion-slide>
+    <ion-slide>
+      <ion-thumbnail class="shadow" [class.selected]="selectedCat === null" color="secondary" (click)="getByCat(null)">
+        <img src="assets/img/it.png">
+        <h6>IT</h6>
+      </ion-thumbnail>
+    </ion-slide>
+    <ion-slide>
+      <ion-thumbnail class="shadow" [class.selected]="selectedCat === null" color="secondary" (click)="getByCat(null)">
+        <img src="assets/img/charity.png">
+        <h6>charity</h6>
+      </ion-thumbnail>
+    </ion-slide>
+
+
+  </ion-slides> -->
+</ion-content>

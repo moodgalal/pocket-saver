@@ -1,0 +1,150 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.toolbar-title {
+	text-align: center;
+	font-size: 28px;
+	font-weight: bold;
+}
+.center {
+	text-align: center;
+}
+.btn-barcode {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+}
+.right-menu-button {
+	margin-right:20px;
+	&:after{
+	  content: '\2807';
+	  font-size: 45px;
+	}
+}
+.menu-cover{
+	position: relative;
+    width:100%;
+    height:140px;
+    background:url(../assets/img/bg.jpg) no-repeat center;
+    background-size:cover;
+}
+.menu-profile{
+	position: relative;
+	color:white;
+	.avatar {
+	    width: 73px;
+	    height: 73px;
+	    padding: 3px;
+	    margin-top: 14px;
+	    margin-left:10px;
+	    margin-right:10px;
+	    border: solid 1px #DDDDDD;
+	    border-radius: 50%;
+	    background: white;
+  	}
+
+}
+
+.overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+  background: #000000; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top, transparent , #000000); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, transparent, #000000); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, transparent, #000000); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, transparent , #000000); /* Standard syntax */
+    opacity: 0.6;
+ }
+ .item-md ion-thumbnail[item-start]{
+	min-width: 60px;
+	min-height: 60px;
+	margin-right: 10px;
+}
+
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+// .item-md{
+//         background-color: transparent;
+//         color: #fff;
+// }
+// .list-md{
+//     background-color: rgba(46, 204, 113, 0.46);
+//     height: 100%;
+// }
+// .toolbar-background-md {
+//     border-color: #62f19e;
+//     background: #27ae60;
+// }
+// .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default,.toolbar-title-md{
+//     color: #fff;
+// }
+// .toolbar-title{
+//     text-align: center;
+//     padding-left: 0px;
+// }
+
+#menu-list{
+	.list-md
+	{
+		background-color: rgba(34, 150, 199, 0.8) !important;
+		height: 100%  !important;
+	}
+}
+.header-sidemenu{
+	background-color: rgba(34, 150, 199, 1);
+	padding: 5px 10px;
+}
+.toolbar-background-md {
+	border-color: #ccc;
+	background: #f3f3f3;
+}
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default,.toolbar-title-md{
+	color: #2296c7;
+}
+.toolbar-title{
+	text-align: center;
+	padding-left: 0px;
+}
+
+.mx-auto{
+	margin-right: auto;
+	margin-left: auto;
+}
+.d-block{
+	display: block !important;
+}
+.back-button.show-back-button {
+  position: absolute;
+  z-index: 99999;
+}

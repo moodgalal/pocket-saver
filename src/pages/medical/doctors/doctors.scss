@@ -1,0 +1,29 @@
+page-doctors {
+    .scroll-content {
+        text-align: center;
+      }
+      h2 {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        margin-top: 10px !important;
+        text-align: center !important;
+        color: #3b3b3b !important;
+      }
+      h4 {
+        margin-top: 10px !important;
+        color: #0a9dc7 !important;
+        font-size: large !important;
+        font-weight: 600 !important;
+      }
+      .catCard {
+        width: 31%;
+        margin: 5px 2px;
+        display: inline-block;
+        img {
+          display: block;
+          width: auto;
+          height: 70px;
+          margin: auto;
+        }
+      }
+}

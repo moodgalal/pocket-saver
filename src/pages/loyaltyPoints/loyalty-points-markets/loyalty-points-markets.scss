@@ -1,0 +1,45 @@
+page-loyalty-points-markets {
+    .card-background-page {
+        
+          ion-card {
+            position: relative;
+            text-align: center;
+            height: 125px;
+            width: 31%;
+            display: inline-block;
+            margin: 2px;
+            
+             img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+          }
+          .text-img{
+              padding: 5px;
+              background-color: rgba(0, 0, 0, 0.3);
+              position: absolute;
+              top: 60%;
+              width: 100%;
+              height: 40%;
+              left: 0;
+          }
+          .card-title {
+            position: absolute;
+            top: 15%;
+            font-size: 13px;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+          }
+        
+          .card-subtitle {
+            font-size: 1.0em;
+            position: absolute;
+            top: 52%;
+            width: 100%;
+            color: #fff;
+          }
+        
+        }
+}

@@ -1,0 +1,21 @@
+page-advanced-settings {
+  ion-content
+  {
+    background-color: #dddddd;
+  }
+   #address , ion-input
+   {
+     border : 1px solid #0a9dc7;
+     border-radius: 5px;
+   }
+  ion-select {
+    min-width: 90%;
+    max-width: 99%;
+  }
+
+  ion-textarea
+  {
+    border : 1px solid #0a9dc7;
+    border-radius: 5px;
+  }
+}

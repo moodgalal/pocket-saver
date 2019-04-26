@@ -1,0 +1,114 @@
+{
+  "name": "PaperGeek",
+  "version": "1.0.0",
+  "author": "PaperGeek Team",
+  "homepage": "http://www.codelandit.com/",
+  "private": true,
+  "scripts": {
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
+  },
+  "dependencies": {
+    "@angular/common": "4.1.3",
+    "@angular/compiler": "4.1.3",
+    "@angular/compiler-cli": "4.1.3",
+    "@angular/core": "4.1.3",
+    "@angular/forms": "4.1.3",
+    "@angular/http": "4.1.3",
+    "@angular/platform-browser": "4.1.3",
+    "@angular/platform-browser-dynamic": "4.1.3",
+    "@ionic-native/background-geolocation": "^4.1.0",
+    "@ionic-native/barcode-scanner": "^4.1.0",
+    "@ionic-native/camera": "^4.1.0",
+    "@ionic-native/core": "^3.12.1",
+    "@ionic-native/facebook": "^4.5.3",
+    "@ionic-native/fcm": "^4.5.3",
+    "@ionic-native/geolocation": "^4.3.1",
+    "@ionic-native/native-storage": "^4.1.0",
+    "@ionic-native/splash-screen": "3.12.1",
+    "@ionic-native/status-bar": "3.12.1",
+    "@ionic-native/twitter-connect": "^4.5.3",
+    "@ionic/cloud-angular": "^0.12.0",
+    "@ionic/storage": "2.0.1",
+    "@types/google-maps": "^3.2.0",
+    "angularfire2": "4.0.0-rc.1",
+    "cordova-android": "6.3.0",
+    "cordova-android-play-services-gradle-release": "^1.2.1",
+    "cordova-ios": "^4.2.0",
+    "cordova-plugin-camera": "^2.4.1",
+    "cordova-plugin-compat": "^1.2.0",
+    "cordova-plugin-console": "^1.1.0",
+    "cordova-plugin-device": "^1.1.7",
+    "cordova-plugin-facebook4": "^1.9.1",
+    "cordova-plugin-fcm": "^2.1.2",
+    "cordova-plugin-geolocation": "^2.4.3",
+    "cordova-plugin-nativestorage": "^2.3.1",
+    "cordova-plugin-splashscreen": "^4.1.0",
+    "cordova-plugin-statusbar": "^2.4.1",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "cordova-windows": "^4.4.2",
+    "firebase": "4.3.1",
+    "ionic-angular": "3.5.0",
+    "ionic-plugin-deploy": "^0.6.7",
+    "ionic-plugin-keyboard": "^2.2.1",
+    "ionic2-rating": "^1.2.2",
+    "ionicons": "3.0.0",
+    "jsbarcode": "^3.8.0",
+    "jspdf": "^1.3.3",
+    "ng2-ckeditor": "^1.1.9",
+    "ng2-pdf-viewer": "^1.1.5",
+    "ngx-toastr": "^6.5.0",
+    "phonegap-plugin-barcodescanner": "^6.0.8",
+    "promise-polyfill": "6.0.2",
+    "rxjs": "5.4.0",
+    "sw-toolbox": "3.6.0",
+    "twitter-connect-plugin": "^0.6.0",
+    "zone.js": "0.8.12"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "2.0.0",
+    "ionic": "3.20.0",
+    "typescript": "2.3.4"
+  },
+  "description": "PaperGeek app",
+  "cordova": {
+    "plugins": {
+      "ionic-plugin-deploy": {},
+      "cordova-plugin-console": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-whitelist": {},
+      "ionic-plugin-keyboard": {},
+      "phonegap-plugin-barcodescanner": {},
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
+      },
+      "cordova-plugin-camera": {},
+      "cordova-plugin-nativestorage": {},
+      "cordova-plugin-facebook4": {
+        "APP_ID": "167952570651529",
+        "APP_NAME": "paper_geek"
+      },
+      "twitter-connect-plugin": {
+        "FABRIC_KEY": "d6f18db9834d620bfe5693c46b4af254a82fb3d9",
+        "TWITTER_KEY": "BeIHTuSqtFf77bXGJWgjoYLBu",
+        "TWITTER_SECRET": "UPVxdi0IFLMUJRFUb6QT0WPBzRx6ngxTgMbHsTWBVr3pCSEJpz"
+      },
+      "cordova-plugin-fcm": {},
+      "cordova-plugin-compat": {},
+      "cordova-android-play-services-gradle-release": {
+        "PLAY_SERVICES_VERSION": "12.+"
+      }
+    },
+    "platforms": [
+      "android"
+    ]
+  },
+  "config": {
+    "ionic_copy": "./scripts/copy-custom-libs.js"
+  }
+}

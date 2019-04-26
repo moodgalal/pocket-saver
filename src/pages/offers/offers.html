@@ -1,0 +1,372 @@
+<ion-header no-margin>
+  <ion-navbar color="primary" align-title="center">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Offers</ion-title>
+    <ion-buttons end>
+
+      <button ion-button clear class="right-menu-button"></button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <!-- cats slides -->
+  <ion-slides class="cat-seg">
+
+    <button ion-button>
+      <img src="assets/img/all.png">
+      <h4>Super Market</h4>
+    </button>
+    <button ion-button>
+      <img src="assets/img/all.png">
+      <h4>Super Market</h4>
+    </button>
+    <button ion-button>
+      <img src="assets/img/all.png">
+      <h4>Super Market</h4>
+    </button>
+    <button ion-button>
+      <img src="assets/img/all.png">
+      <h4>Super Market</h4>
+    </button>
+
+  </ion-slides>
+
+</ion-header>
+
+<ion-content class="card-background-page" padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-2>
+        <div class="all-btn-container">
+
+
+        <button class="all-button" ion-button value="carrefor" (click)="changeFilter('all')">
+          <img src="assets/img/all.png">
+        </button>
+      </div>
+      </ion-col>
+      <ion-col col-10>
+        <ion-slides class="sub-cat">
+          <button ion-button value="carrefor" (click)="changeFilter('carrefor1')" >
+            <img src="assets/img/carrefor.png">
+          </button>
+          <button ion-button value="carrefor" (click)="changeFilter('carrefor2')" >
+            <img src="assets/img/carrefor.png">
+          </button>
+          <button ion-button value="carrefor" (click)="changeFilter('carrefor3')" >
+            <img src="assets/img/carrefor.png">
+          </button>
+          <button ion-button value="carrefor" (click)="changeFilter('carrefor4')" >
+            <img src="assets/img/carrefor.png">
+          </button>
+
+
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div [ngSwitch]="catsFilter">
+    <ion-list *ngSwitchCase="'all'">
+     <h1>ALL ITEMS HERE</h1>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'carrefor1'">
+      <h1>Button 1 Clicked</h1>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+    <ion-list *ngSwitchCase="'carrefor2'">
+      <h1>Button 2 Clicked</h1>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+    <ion-list *ngSwitchCase="'carrefor3'">
+      <h1>Button 3 Clicked</h1>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+    <ion-list *ngSwitchCase="'carrefor4'">
+      <h1>Button 4 Clicked</h1>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+
+          <ion-col col-6>
+            <ion-card class="offerCard">
+              <ion-card-content>
+                <img src="assets/img/offers.jpg">
+                <h2>offer 25% for...</h2>
+              </ion-card-content>
+              <div class="card-footer">
+                <h3>Offer name </h3>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+
+</ion-content>

@@ -1,0 +1,48 @@
+page-signup {
+    .scroll-content{
+      overflow: overlay;
+    }
+
+    .content{
+      background-image: none;
+      background-color: #488aff;
+    }
+    .list-md{
+      background-color: transparent;
+    }
+    .logo{
+      border-bottom: 1px solid rgba(0,0,0,.05);
+      padding-bottom: 10px;
+      width: 100%;
+    }
+    .login-container{
+      padding: 5px;
+      margin-top: 10%;
+      background-color: #fff;
+      box-shadow: 0 1px 3px 1px rgba(0,0,0,.4);
+      margin-right: 5%;
+      margin-left: 5%;
+      border-radius: 20px;
+      span{
+        vertical-align: middle;
+      }
+    }
+    .margint-1{
+      margin-top: 1%!important;
+    }
+    .marb-10{
+      margin-bottom: 10% !important;
+    }
+
+    .error{
+      padding: 7px;
+      background-color: #fb2a32;
+      color: white;
+    }
+
+  .item-label-stacked .text-input-md, .item-label-floating .text-input-md
+  {
+    color: black;
+  }
+}
+//$text-input-placeholder-color:white;

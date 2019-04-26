@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Green Bank list</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <ion-searchbar (ionInput)="filter($event)"></ion-searchbar>
+  <ion-list>
+
+    <ion-item *ngFor="let bank of banks">
+      <ion-thumbnail item-start (click)="goBankProfile()">
+        <img src="assets/img/bank-bh.jpg">
+
+      </ion-thumbnail>
+      <h2 (click)="goBankProfile()">{{bank}}</h2>
+
+        <button ion-button clear item-end>
+          <ion-icon class="icon-map" name="map"></ion-icon>ATM</button>
+
+        <button ion-button clear item-end>
+          <ion-icon class="icon-map" name="map"></ion-icon>Bransh</button>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

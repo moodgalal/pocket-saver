@@ -1,0 +1,39 @@
+page-entry {
+  ion-title img{
+    width: auto;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+  .content{
+    // background-color: #2ecc71;
+    // background-image: url(../assets/img/bg.png);
+    background-image: url(../assets/img/bg-2.jpg);
+    background-color: #d8d6d6;
+  }
+  .logo-home{
+    // width: 100px;
+    // height: auto;
+    height: 100px;
+    width: auto;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .buttons-container .btn{
+    font-size: 14px;
+    padding: 5px 35px;
+  }
+  .slider{
+    margin-bottom: 10%;
+  }
+  .slider p{
+    font-size: 14px;
+    color: #2296c7;
+  }
+  .menu-inner .scroll-content{
+    overflow: visible;
+  }
+  .scroll-content{
+    overflow: hidden;
+  }
+}

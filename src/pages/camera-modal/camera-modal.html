@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Save picture</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding text-center>
+    <img [src]="image" alt="Bill picture">
+  <button [disabled]="image == null || disableButtons" ion-button color="secondary" (click)="save()">Upload Image</button>
+</ion-content>

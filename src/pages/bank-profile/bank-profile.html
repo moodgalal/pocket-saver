@@ -1,0 +1,60 @@
+<ion-header>
+  
+    <ion-navbar no-border-bottom>
+      <ion-title>KFH Bank</ion-title>
+    </ion-navbar>
+  
+
+  </ion-header>
+  
+  
+  <ion-content padding>
+    
+     
+         
+           <ion-avatar >
+             
+             <img src="assets/img/bank-bh.jpg" class="avatar">
+             <div class="overlay-bank"></div>
+           </ion-avatar>
+           <ion-list>
+              <ion-item (click)="desc()">
+                  <ion-icon item-start name="text" color="primary"></ion-icon>
+                  Description
+                </ion-item>
+             <ion-item (click)="phones()">
+               <ion-icon item-start name="phone-portrait" color="primary"></ion-icon>
+               Phone Numbers
+             </ion-item>
+             <ion-item (click)="atms()">
+               <ion-icon item-start name="card" color="primary"></ion-icon>
+               ATM
+               <ion-note item-end="" class="note note-md"><button ion-button clear item-end>
+                  <ion-icon class="icon-map" name="map"></ion-icon>Nearest ATM</button></ion-note>
+             </ion-item>
+             <ion-item (click)="branches()">
+               <ion-icon item-start name="home" color="primary"></ion-icon>
+               Branches
+               <ion-note item-end="" class="note note-md"> <button ion-button clear item-end>
+                  <ion-icon class="icon-map" name="map"></ion-icon>Nearest branch</button></ion-note>
+             </ion-item>
+             <ion-item (click)="bankStatements()">
+               <ion-icon item-start name="help-buoy" color="primary"></ion-icon>
+               Bank statements
+             </ion-item>
+             <ion-item (click)="bankReceipts()">
+              <ion-icon item-start name="paper" color="primary"></ion-icon>
+              ATM Receipts
+            </ion-item>
+            <ion-item (click)="otherReceipts()">
+              <ion-icon item-start name="paper" color="primary"></ion-icon>
+              Other Receipts
+            </ion-item>
+  
+           </ion-list>
+         
+     
+  
+   
+  </ion-content>
+  

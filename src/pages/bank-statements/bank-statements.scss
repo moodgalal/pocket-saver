@@ -1,0 +1,66 @@
+page-bank-statements {
+    .content{
+        background-image: none;
+        background-color: #f3f3f3;
+        .list-header{
+          background-color: #2296c7 !important;
+          color: #fff;
+          margin: 0;
+          text-align: center;
+          min-height: 10px !important;
+          .label-md{
+              
+          }
+        }
+        .list-md{
+          margin: 0 0 0;
+        .item-block
+        {
+          padding-left: 10px !important;
+          background-color: white !important;
+        }
+        }
+      
+      
+      .date-container{
+        background-color: #2296c7;
+        border-radius: 50%;
+        padding: 3px 5px;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        span{
+          font-size: 11px;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+      ion-item{
+        h2,h5 ion-icon , strong {
+          color: #2296c7;
+        }
+        h5{
+          color: #2296c7 !important;
+        }
+        h2 span{
+          color: grey;
+        }
+      
+      }
+      
+      .item-md ion-avatar{
+        margin:4px 16px 4px 5px !important;
+      }
+      .label-md {
+        margin: 8px 8px 8px 0;
+      }
+      ion-app .md [padding] .scroll-content{
+        padding: 1px 0;
+      }
+      .list-md ion-item-sliding {
+        background-color: #fff;
+        margin: 3px 0;
+      }
+      
+      }
+}

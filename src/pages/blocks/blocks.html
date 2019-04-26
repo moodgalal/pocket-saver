@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Districts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="blocks">
+    <ion-list>
+      <button [disabled]="disableButtons" ion-item  *ngFor="let block of blocks" (click)="select(block.blockCode)" [class.selected]="selected != null && block.blockCode == selected">
+        <strong>{{ block.blockName }}</strong>
+      </button>
+    </ion-list>
+  </div>
+</ion-content>

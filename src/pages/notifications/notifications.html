@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Notifications
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let user of usersRef$ | async" (click)="sendPush(user.token, sender.token , sender.email , 'Would you take it ?' , 'sender')">
+      <span>{{user.email}}</span>
+    </button>
+  </ion-list>
+</ion-content>

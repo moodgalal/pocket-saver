@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "703336634416",
+    "firebase_url": "https://go-green-15c9c.firebaseio.com",
+    "project_id": "go-green-15c9c",
+    "storage_bucket": "go-green-15c9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703336634416:android:d236b00bcac878d6",
+        "android_client_info": {
+          "package_name": "io.PaperGeek.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "703336634416-pjoeaje99q4rsal3d8i8j2l8pi248eqf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADmaKgXNfWqhfmMm6NzZt0BrXRzrD4TGE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

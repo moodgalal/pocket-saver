@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Countries</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="countries">
+      <ion-list>
+        <button ion-item  *ngFor="let country of countries" (click)="select(country.countryCode)" [class.selected]="selected != null && country.countryCode == selected">
+            <strong>{{ country.countryName }}</strong>
+        </button>
+      </ion-list>
+    </div>
+</ion-content>

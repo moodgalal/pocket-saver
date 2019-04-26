@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Cities</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <div *ngIf="cities">
+    <ion-list>
+      <button ion-item  *ngFor="let city of cities" (click)="select(city.cityCode)" [class.selected]="selected != null && city.cityCode == selected">
+        <strong>{{ city.cityName }}</strong>
+      </button>
+    </ion-list>
+  </div>
+</ion-content>

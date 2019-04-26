@@ -1,0 +1,85 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Advanced settings</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form no-border  no-margin #parent="ngForm">
+  <div style="margin-bottom: 50px">
+<ion-list>
+  <ion-item-group>
+    <ion-item-divider>
+      <h1 color="grey">Store Information</h1>
+    </ion-item-divider>
+    <ion-item>
+      <h2 item-start>Store Type</h2>
+      <ion-select [disabled]="storeTypes.length == 0" item-end float-end  [(ngModel)]="storeTypeId"  (ionChange)="getStoreNames()" [placeholder]="storeTypeName" [selectOptions]="options" name="type" required>
+        <ion-option *ngFor="let name of storeTypes" [value]="name.storeCatTypeID " >{{ name.storeCatTypeName }}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <h2 item-start>Store Name</h2>
+      <ion-select [disabled]="storeNames.length == 0" item-end float-end [(ngModel)]="storeNameId" [placeholder]="storeName" [selectOptions]="options" name="storeName">
+        <ion-option *ngFor="let name of storeNames" [value]="name.storeID">{{ name.storeName }}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item no-lines no-border>
+         <button item-end ion-button small color="primary" padding (click)="showAddStore()">Add store</button>
+    </ion-item>
+  </ion-item-group>
+</ion-list>
+
+    <form #f="ngForm" [hidden]="!showAddStoreFlag" padding>
+
+        <ion-label placeholder for="storeName">Store Name</ion-label>
+        <ion-input id="storeName" type="text" [(ngModel)]="addedStoreName" name="name" required placeholder="Enter Store Name"></ion-input>
+
+        <ion-label placeholder for="address">Address</ion-label>
+        <ion-textarea id="address" [(ngModel)]="addedStoreAddress" name="address" required placeholder="Enter Store Location"></ion-textarea>
+
+    <button [disabled]="!f.valid || disableButtons" ion-button block (click)="addStore()">Save</button>
+    </form>
+
+
+  <ion-list>
+
+    <ion-item-divider>
+      <h1 color="grey">Currency Information</h1>
+    </ion-item-divider>
+
+    <div *ngIf="currency.length > 0">
+    <ion-item>
+      <h2 item-start>Choose Currency</h2>
+      <ion-select  item-end float-end [(ngModel)]="currencyCode" (ionChange)="setCurrency()" [selectOptions]="options" name="curname">
+        <ion-option *ngFor="let cur of currency" [value]="cur.currencyCode">{{ cur.currencyName }}</ion-option>
+      </ion-select>
+    </ion-item>
+    </div>
+
+<ion-item-group [hidden]="showCurrencyFlag">
+  <ion-item>
+    <h2 item-start>is Multiply</h2>
+    <ion-toggle item-end [(ngModel)]="isMultiply"  color="primary" name="multiply"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <label item-start>Exchange Rate</label>
+    <ion-input type="number" item-end [(ngModel)]="rate" name="rate" placeholder="Mandatory" required></ion-input>
+  </ion-item>
+</ion-item-group>
+  </ion-list>
+  <ion-label for="comment" style="margin-left: 3px">Comments</ion-label>
+  <ion-textarea id="comment" [(ngModel)]="comments" name="comments">
+
+  </ion-textarea>
+  </div>
+
+  <button [disabled]="!parent.valid || disableButtons" ion-button color="primary" block (click)="updateAdvanced()">Update</button>
+</form>
+</ion-content>

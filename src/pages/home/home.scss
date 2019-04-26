@@ -1,0 +1,162 @@
+//page-home {
+//   *
+//   {
+//     margin: 0;
+//   }
+//  ion-thumbnail{
+//    background: linear-gradient(#00b22d , #00e641);
+//    color: white;
+//    text-align: center;
+//    padding: 10px 25px;
+//    *{
+//      font-weight: bold;
+//    }
+//  }
+//  [item-end] {
+//    color: #848484;
+//  }
+  .calender
+  {
+    float: left;
+    display: inline ;
+    background: none;
+    font-size: 12px;
+    margin-top: 4px;
+    ion-icon
+    {
+      color:black;
+    }
+    $text-input-placeholder-color: #131313;
+  }
+//
+//}
+page-home
+{
+  .right-menu-button
+  {
+    margin-left:20px;
+  }
+  .content{
+    // background-color: #2ecc71;
+    // background-image: url(../assets/img/bg.png);
+    background-image: none;
+    background-color: #2296c7;
+    .list-md{
+      margin: 0 0 0;
+    .item-md
+    {
+      padding-left: 10px !important;
+      background-color: white !important;
+    }
+    }
+
+
+  .date-container{
+    background-color: #2296c7;
+    border-radius: 50%;
+    padding: 3px 5px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    span{
+      font-size: 11px;
+      font-weight: 600;
+    }
+  }
+  ion-item{
+    h2,h5 ion-icon , strong {
+      color: #2296c7;
+    }
+    h5{
+      color: #2296c7 !important;
+    }
+    h2 span{
+      color: grey;
+    }
+
+  }
+
+
+
+
+  .item-md ion-avatar{
+    margin:4px 16px 4px 5px !important;
+  }
+  .label-md {
+    margin: 8px 8px 8px 0;
+  }
+  ion-app .md [padding] .scroll-content{
+    padding: 1px 0;
+  }
+  .list-md ion-item-sliding {
+    background-color: #fff;
+    margin: 3px 0;
+  }
+  // .toolbar-title .icon{
+  //     float: right;
+  //     margin-top: 1%;
+  // }
+}
+}
+#home-menu {
+  .item-md{
+    background-color: transparent !important;
+  }
+}
+
+//     .input-group{
+//         margin-bottom: 1%;
+//         // width: 60%;
+
+//         .input-group-addon{
+//             color: #fff;
+//             background-color: #ffc107;
+//         }
+//         input{
+//             padding: 11px 5px;
+//             font-size: 16px;
+//         }
+//     }
+//     .card{
+//         .card-header{
+//             h5{
+//                 font-size: 15px;
+//             }
+//         }
+//     }
+//     .select-md .select-icon .select-icon-inner {
+//     left: 4px;
+//     top: 50%;
+//     margin-top: -3px;
+//     position: absolute;
+//     width: 0;
+//     height: 0;
+//     border-top: 5px solid;
+//     border-bottom: 0px solid;
+//     border-left: 5px solid rgba(255, 255, 255, 0);
+//     /* border-left: 5px solid rgba(255, 255, 255, 0); */
+//     color: #fff;
+//     pointer-events: none;
+//     }
+//     .list-md{
+//         height: auto;
+//         background-color: #ffc107;
+//         width: 100%;
+//     }
+//     .width-60{
+//         width: 60%;
+//     }
+//     .width-40{
+//         width: 40%;
+//     }
+//     .pdx-5{
+//     padding: 0px 5px;
+// }
+//     .pdl-15{
+//         padding-left: 15px;
+//     }
+//     .pdr-15{
+//         padding-right: 15px;
+//     }
+// }
+// #0cd024
